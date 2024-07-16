@@ -1,0 +1,54 @@
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+.title-magazine{
+    text-align: center;
+    color: #fff;
+}
+.catalog {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    align-items: center;
+    padding: 20px;
+}
+.magazine {
+    background-color: white;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    box-sizing: border-box;
+    text-align: left;
+}
+.magazine img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.magazine h3 {
+    color: #201e57;
+}
+.magazine p {
+    color: #333;
+}
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.sticky-header{
+    position: sticky;
+    top: 0px;
+}

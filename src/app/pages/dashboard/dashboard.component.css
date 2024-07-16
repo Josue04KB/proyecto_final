@@ -1,0 +1,30 @@
+main {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.highlighted-magazines {
+    text-align: center;
+  
+}
+
+.magazine-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.magazine {
+    background-color: #eaeaea;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.magazine h2 {
+    margin-top: 0;
+}

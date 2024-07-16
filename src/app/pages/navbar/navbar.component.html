@@ -1,0 +1,27 @@
+<header class="sticky-header">
+    <nav>
+        <div class="nav-links"><a routerLink="/inicio"><b>ULEAM</b></a></div>
+        <ul class="nav-links">
+
+            @if (!authService.isLoggedIn()) {
+                
+                <li><a routerLink="/login">Acceder</a></li>
+                <li><a routerLink="/register">Registrese</a></li>
+            }
+            @if (authService.isLoggedIn()) {
+                <div>
+                    <li><a routerLink="/revistas">Revistas</a></li>
+                </div>
+                <div>
+                    <li><a routerLink="/enviar">Enviar</a></li>
+                </div>
+            <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Ver perfil</a>
+            <div class="dropdown-content">
+                <a routerLink="/profile">Perfil</a>
+                <a (click)="logout()">Cerrar sesión</a>
+            </div>
+            }
+        </ul>
+    </nav>
+</header>

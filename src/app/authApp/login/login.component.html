@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h2 class="centro logo">Inicio de Sesión</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div>
+      <label>Email:</label>
+      <input 
+      id="email"
+      name="email"
+      type="email" 
+      formControlName="email" />
+      <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="error-message">
+        <small *ngIf="loginForm.get('email')?.errors?.['required']">El email es requerido.</small>
+        <small *ngIf="loginForm.get('email')?.errors?.['email']">El email no es válido.</small>
+      </div>
+    </div>
+    <div>
+      <label>Contraseña:</label>
+      <input type="password" formControlName="password" />
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error-message">
+        <small *ngIf="loginForm.get('password')?.errors?.['required']">La contraseña es requerida.</small>
+      </div>
+    </div>
+
+    <div class="login">
+      <p>¿Aun no tiene cuenta?, <a routerLink="/register">Registrese</a></p>
+
+    </div>
+
+    <button type="submit">Iniciar Sesión</button>
+  </form>
+  <p class="error-message">{{ message }}</p>
+</div>
